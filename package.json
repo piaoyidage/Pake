@@ -13,7 +13,8 @@
     "start": "npm run dev",
     "dev": "npm run tauri dev",
     "build": "npm run tauri build",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "build:multi-release": "node ./src-tauri/createConf.js"
   },
   "license": "MIT",
   "dependencies": {
