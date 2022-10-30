@@ -67,11 +67,11 @@ const createConf = (c) => {
 }
 
 const configList = [{
-    productName: 'WeRead',
+    productName: 'Twitter',
     version: '0.2.0',
-    url: 'https://weread.qq.com/',
-    icon: ["icons/weRead.icns"],
-    identifier: "com.tw93.weRead"
+    url: 'https://twitter.com/',
+    icon: ["icons/twitter.icns"],
+    identifier: "com.tw93.twitter"
 }, {
     productName: 'flomo',
     version: '0.2.0',
