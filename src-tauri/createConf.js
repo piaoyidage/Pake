@@ -67,17 +67,17 @@ const createConf = (c) => {
 }
 
 const configList = [{
-    productName: 'flomo',
-    version: '0.2.0',
-    url: 'https://v.flomo.com/',
-    icon: ["icons/flomo.icns"],
-    identifier: "com.tw93.flomo"
-}, {
     productName: 'WeRead',
     version: '0.2.0',
     url: 'https://weread.qq.com/',
     icon: ["icons/weRead.icns"],
     identifier: "com.tw93.weRead"
+}, {
+    productName: 'flomo',
+    version: '0.2.0',
+    url: 'https://v.flomo.com/',
+    icon: ["icons/flomo.icns"],
+    identifier: "com.tw93.flomo"
 }]
 
 
