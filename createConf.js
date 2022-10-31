@@ -82,10 +82,11 @@ const configList = [{
 
 configList.forEach(c => {
     const config = JSON.stringify(createConf(c));
-    fs.writeFileSync(path.resolve(__dirname, 'tauri.conf.json'), config)
+    fs.writeFileSync(path.resolve(__dirname, './src-tauri/tauri.conf.json'), config)
     execSync(`npm run tauri build`)
-    execSync('mkdir /src-tauri/target/release/bundle/dmg-backup/')
-    execSync('mv /src-tauri/target/release/bundle/dmg/*.dmg /src-tauri/target/release/bundle/dmg-backup/')
+    execSync(`mkdir -p ${path.resolve(__dirname, './src-tauri/target/release/bundle/dmg-backup/')}`)
+    // execSync(`mv ${path.resolve(__dirname, '/src-tauri/target/release/bundle/dmg/*.dmg')} ${path.resolve(__dirname, '/src-tauri/target/release/bundle/dmg-backup/')}`
+    execSync(`mv ${path.resolve(__dirname, './src-tauri/target/release/bundle/dmg/*.dmg')} ${path.resolve(__dirname, './src-tauri/target/release/bundle/dmg-backup/')}`)
 })
 
-execSync('mv /src-tauri/target/release/bundle/dmg-backup/*.dmg /src-tauri/target/release/bundle/dmg/')
+execSync(`mv ${path.resolve(__dirname, './src-tauri/target/release/bundle/dmg-backup/*.dmg')} ${path.resolve(__dirname, './src-tauri/target/release/bundle/dmg/')}`)
