@@ -80,12 +80,11 @@ const configList = [{
     identifier: "com.tw93.flomo"
 }]
 
-execSync('mkdir /src-tauri/target/release/bundle/dmg-backup/')
-
 configList.forEach(c => {
     const config = JSON.stringify(createConf(c));
     fs.writeFileSync(path.resolve(__dirname, 'tauri.conf.json'), config)
     execSync(`npm run tauri build`)
+    execSync('mkdir /src-tauri/target/release/bundle/dmg-backup/')
     execSync('mv /src-tauri/target/release/bundle/dmg/*.dmg /src-tauri/target/release/bundle/dmg-backup/')
 })
 
